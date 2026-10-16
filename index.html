@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>IWG Generative Space Planner</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css"></head><body><div id="app">
+<div class="bar"><span class="logo">IWG <i>Space Planner</i></span>
+<button data-t="select" title="Select / move (V)">Select</button><button data-t="wall" title="Drag to draw a new wall">Draw wall</button><button data-t="room" title="Drag to draw a room">Draw room</button><button data-t="pan" title="Pan (or hold Space)">Pan</button>
+<button data-t="nb" title="Drag to mark a restricted area">No-build zone</button><button data-t="cal" title="Set scale from a known distance">Calibrate scale</button><button id="un">Undo</button><button id="re">Redo</button><button id="fit">Fit</button>
+<select id="unit" style="width:auto"><option value="m">Metric</option><option value="ft">Imperial</option></select>
+<label><input type="checkbox" id="snap" checked> Snap</label><label><input type="checkbox" id="grid" checked> Grid</label>
+<span class="sp"></span><button id="imp">Import plan</button><button id="exp">Export</button><button id="tab1">Planner</button><button id="tab2">Compare</button><button id="save">Save session</button><button id="open">Open session</button><button class="go" id="gen">Generate layouts</button></div>
+<div class="bar" id="optbar"></div>
+<main><aside id="L"></aside><div id="cv"><svg id="sv"></svg><div class="legend"><span><s style="background:#0b3a8f"></s>Retain wall</span><span><s style="border:1px dashed #f79009"></s>Demolition permitted</span><span><s style="background:#12b76a"></s>New wall</span><span><s style="background:#8896ad"></s>Core / column</span></div></div><aside class="r" id="R"></aside><div id="cmp" hidden></div></main></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script><script src="app.js"></script></body></html>
